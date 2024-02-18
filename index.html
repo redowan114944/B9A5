@@ -10,8 +10,163 @@
 
     <!-- custom CSS -->
     <link rel="stylesheet" href="styles/style.css">
+
+    <!-- font icon -->
+    <script src="https://kit.fontawesome.com/9a780eae57.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- nav-bar -->
+    <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </div>
+          </div>
+          <a class="btn btn-ghost text-xl">Unique Service</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+            <a class="btn btn-with-icon" href="#">
+                <span style="color: #1dd10d;">Bus</span> <img src="images/bus-icon.png" alt="">
+            </a>
+            
+            
+        </div>
+      </div>
+
+    <!-- banner section -->
+    <div class="hero min-h-screen max-h-6xl" style="background-image: url(./images/banner.png);">
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-2xl">
+            <h1 class="mb-5 text-4xl font-bold">From start to destination travel with <br> <span style="font-weight: 900; color: #1dd10d;">Unique Service</span></h1>
+            <p class="mb-5">Embark on a seamless journey with Unique Service, where every ride is an adventure. Experience comfort, reliability, and exceptional service as we pave the way for unforgettable travels.</p>
+            <button class="btn" style="background-color: #1DD10D; border: none;">Buy Tickets</button>
+
+          </div>
+        </div>
+      </div>
+
+    <!-- offer section -->
+    <section class="mt-32">
+        <div class="text-center">
+            <h1 class="text-5xl pb-10">Best offers for you</h1>
     
+            <div class="container ml-auto mr-auto" style="display: flex; justify-content: center;">
+                <div class="coupon-card">
+                    <div class="flex">
+                        <div style="margin-right: 20px;"> <!-- Adjust the margin-right as needed -->
+                            <h3> 
+                                <span class="font-extrabold" style="font-size: 40px;">15% OFF</span> <br>
+                                <span style="font-size: 20px;">on your next purchase</span> <br>
+                                <span style="font-size: 18px;">use by January 2024</span>
+                            </h3>
+                        </div>
+                        <div class="vertical-line"></div>
+                        <div class="items-center justify-center" style="margin-left: 20px;"> <!-- Adjust the margin-left as needed -->
+                            <span class="font-extrabold" style="font-size: 32px;">NEW15</span> <br>
+                            <span style="font-size: 18px;">Coupon Code</span>
+                        </div>
+                    </div>
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                </div>
+    
+                <div class="coupon-card-2">
+                    <div class="flex">
+                        <div style="margin-right: 20px;"> <!-- Adjust the margin-right as needed -->
+                            <h3> 
+                                <span class="font-extrabold" style="font-size: 40px;">20% OFF</span> <br>
+                                <span style="font-size: 20px;">on your next purchase</span> <br>
+                                <span style="font-size: 18px;">use by January 2024</span>
+                            </h3>
+                        </div>
+                        <div class="vertical-line"></div>
+                        <div class="items-center justify-center align-middle " style="margin-left: 20px;"> <!-- Adjust the margin-left as needed -->
+                            <span class="font-extrabold" style="font-size: 20px;">COUPLE20</span> <br>
+                            <span style="font-size: 18px;">Coupon Code</span>
+                        </div>
+                    </div>
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                </div>
+               
+            </div>
+            <button class="btn mt-20" style="color: #1DD10D; border-color: #1DD10D;">See all offer</button>
+        </div>
+    </section>
+
+    <!-- ticket section -->
+    <section class=" bg-[#F7F8F8] border-t-2 border-solid border-green-500 rounded-3xl mt-20">
+        <div class="text-center ml-80 mr-80">
+        <h1 class="text-4xl font-bold mt-20">Unique Service</h1>
+        <p class="text-sm">Experience seamless travel booking with our user-friendly bus ticket section. Explore a wide range of routes, schedules, and fares tailored to your preferences. Enjoy hassle-free reservations and embark on your next journey with ease.</p>
+        </div>
+        
+        <div class="bg-[#FFF] flex text-center items-center justify-center mt-10 mr-32 ml-32 p-8">
+            <div class="ml-32 mr-32">
+
+                <div class="flex justify-between">
+                    <div class="flex">
+                        <img src="images/bus-logo.png" alt="">
+                        <div>
+                            <h2 class="font-extrabold">Unique Service</h2>
+                            <p class="text-xs">Coach-009-WEB ! AC_Business</p>
+                        </div>
+                    </div>
+                    <div>
+                            <button class="flex"> <img src="images/seat-green-filled.png" alt=""> <span style="color: #1dd10d;">40 Seats left</span></button>
+                    </div>
+                </div>
+
+                <div class="bg-[#F7F8F8] p-8 rounded-3xl mt-7">
+                    <div class="flex justify-between pt-6 pb-6">
+                        <div>
+                        <h1>Route</h1>
+                    </div>
+                    <div>
+                        <h1>Dhaka - Chattogram</h1>
+                    </div>
+                </div>
+                <hr style="width: 100%; border: none; border-top: 2px dashed #888;">
+                    <div class="flex justify-between pt-6 pb-6">
+                        <div>
+                        <h1>Departure Time</h1>
+                    </div>
+                    <div>
+                        <h1>9:00 PM</h1>
+                    </div>
+                </div>
+                <hr style="width: 100%; border: none; border-top: 2px dashed #888;">
+                <div class="items-center justify-center">
+                    <div class="text-center">
+                    <button class="btn mt-6" style="color: #000000; background-color: #0307120d; border: 0;">Boarding Point - Gadtali</button>
+                    <button class="btn mt-6" style="color: #000000; background-color: #0307120d; border: 0;">Dropping Point - GEC more</button>
+                    <button class="btn mt-6" style="color: #000000; background-color: #0307120d; border: 0;">Est. Time - 6 Hour</button>
+                    </div>
+                </div>
+                </div>
+        </div>
+
+        <div class="border-r border-solid" style="border-color: #1DD100;"></div>
+
+
+        <div class="flex-col">
+            <img src="images/fare.png" alt="">
+            <br>
+            <h1><span class="font-extrabold">550 Taka</span><br> per seat</h1>
+        </div>
+        
+        </div>
+
+    </section>
 </body>
 </html>

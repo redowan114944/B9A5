@@ -5,3 +5,115 @@
     font-family: "Raleway", sans-serif;
 }
 
+
+/*the complete project is in the following link:
+https://github.com/vkive/coupon-code.git
+Follow me on Codepen
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    
+}
+.container{
+    width: 573px;
+    height: 220px;
+    /* background: #f0fff3; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.coupon-card{
+    background: #ffff00;
+    color: black;
+    text-align: center;
+    padding: 40px 80px;
+    border-radius: 15px;
+    /* box-shadow: 0 10px 10px 0 rgba(0,0,0,0.15); */
+    position: relative;
+    margin-top: 50px;
+    margin-right: 20px;
+
+}
+
+.coupon-card-2{
+    background: palevioletred;
+    color: black;
+    text-align: center;
+    padding: 40px 80px;
+    border-radius: 15px;
+    /* box-shadow: 0 10px 10px 0 rgba(0,0,0,0.15); */
+    position: relative;
+    margin-top: 50px;
+}
+
+.coupon-card,
+.coupon-card-2 {
+    width: 573px; /* Set the same width for both cards */
+    height: 220px; /* Set the same height for both cards */
+    margin-bottom: 20px; /* Optional: Add margin between the cards */
+}
+
+.logo{
+    width: 80px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+}
+.coupon-card h3{
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 40px;
+
+}
+.coupon-card p{
+    font-size: 15px;
+
+}
+.coupon-row{
+    display: flex;
+    align-items: center;
+    margin: 25px auto;
+    width: fit-content;
+
+}
+
+
+.circle1, .circle2 {
+    background: #FFF;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.circle1 {
+    top: -25px;
+    left: 50%;
+    transform: translateX(30%);
+}
+
+.circle2 {
+    bottom: -25px;
+    right: 50%;
+    transform: translateX(120%);
+}
+
+.coupon-wrapper {
+    display: flex;
+    align-items: stretch; /* Make all children the same height */
+}
+
+.vertical-line {
+    width: 1px; /* Adjust the width of the line */
+    background-color: #000000; /* Adjust the color of the line */
+    margin: 0 20px; /* Adjust the margin to create space around the line */
+}
+
+
+
+
+
