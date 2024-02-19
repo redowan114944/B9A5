@@ -43,20 +43,22 @@
       </div>
 
     <!-- banner section -->
-    <div class="hero min-h-screen max-h-6xl" style="background-image: url(./images/banner.png);">
+    <div id="banner-screen" class="hero min-h-screen max-h-6xl" style="background-image: url(./images/banner.png);">
         <div class="hero-overlay bg-opacity-60"></div>
         <div class="hero-content text-center text-neutral-content">
           <div class="max-w-2xl">
             <h1 class="mb-5 text-4xl font-bold">From start to destination travel with <br> <span style="font-weight: 900; color: #1dd10d;">Unique Service</span></h1>
             <p class="mb-5">Embark on a seamless journey with Unique Service, where every ride is an adventure. Experience comfort, reliability, and exceptional service as we pave the way for unforgettable travels.</p>
-            <button class="btn" style="background-color: #1DD10D; border: none;">Buy Tickets</button>
+            <button onclick="ticket(event)" class="btn" style="background-color: #1DD10D; border: none; color: white;">Buy Tickets</button>
+
+
 
           </div>
         </div>
       </div>
 
     <!-- offer section -->
-    <section class="mt-32">
+    <section id="offer-section" class="mt-32">
         <div class="text-center">
             <h1 class="text-5xl pb-10">Best offers for you</h1>
     
@@ -91,7 +93,7 @@
                         </div>
                         <div class="vertical-line"></div>
                         <div class="items-center justify-center align-middle " style="margin-left: 20px;"> <!-- Adjust the margin-left as needed -->
-                            <span class="font-extrabold" style="font-size: 20px;">COUPLE20</span> <br>
+                            <span class="font-extrabold" style="font-size: 20px;">COUPLE 20</span> <br>
                             <span style="font-size: 18px;">Coupon Code</span>
                         </div>
                     </div>
@@ -105,68 +107,197 @@
     </section>
 
     <!-- ticket section -->
-    <section class=" bg-[#F7F8F8] border-t-2 border-solid border-green-500 rounded-3xl mt-20">
-        <div class="text-center ml-80 mr-80">
-        <h1 class="text-4xl font-bold mt-20">Unique Service</h1>
-        <p class="text-sm">Experience seamless travel booking with our user-friendly bus ticket section. Explore a wide range of routes, schedules, and fares tailored to your preferences. Enjoy hassle-free reservations and embark on your next journey with ease.</p>
-        </div>
+    <section id="ticket-Section" class="hidden">
+        <div class=" bg-[#F7F8F8] border-t-2 border-solid border-green-500 rounded-3xl mt-20">
+            <div class="text-center ml-80 mr-80">
+                <h1 class="text-4xl font-bold mt-20">Unique Service</h1>
+                <p class="text-sm">Experience seamless travel booking with our user-friendly bus ticket section. Explore a wide range of routes, schedules, and fares tailored to your preferences. Enjoy hassle-free reservations and embark on your next journey with ease.</p>
+                </div>
+                
+                <div class="bg-[#ffffff] flex text-center items-center justify-center mt-10 mr-32 ml-32 p-8">
+                    <div class="ml-32 mr-32">
         
-        <div class="bg-[#FFF] flex text-center items-center justify-center mt-10 mr-32 ml-32 p-8">
-            <div class="ml-32 mr-32">
-
-                <div class="flex justify-between">
-                    <div class="flex">
-                        <img src="images/bus-logo.png" alt="">
-                        <div>
-                            <h2 class="font-extrabold">Unique Service</h2>
-                            <p class="text-xs">Coach-009-WEB ! AC_Business</p>
+                        <div class="flex justify-between">
+                            <div class="flex">
+                                <img src="images/bus-logo.png" alt="">
+                                <div>
+                                    <h2 class="font-extrabold">Unique Service</h2>
+                                    <p class="text-xs">Coach-009-WEB ! AC_Business</p>
+                                </div>
+                            </div>
+                            <div id="seatsLeftCounterContainer">
+                                <button class="flex"> <img src="images/seat-green-filled.png" alt=""> <span id="seatsLeftCounter">8 Seats left</span></button>
+                            </div>
+                            
+                            
+                            
+                            
                         </div>
-                    </div>
-                    <div>
-                            <button class="flex"> <img src="images/seat-green-filled.png" alt=""> <span style="color: #1dd10d;">40 Seats left</span></button>
-                    </div>
-                </div>
-
-                <div class="bg-[#F7F8F8] p-8 rounded-3xl mt-7">
-                    <div class="flex justify-between pt-6 pb-6">
-                        <div>
-                        <h1>Route</h1>
-                    </div>
-                    <div>
-                        <h1>Dhaka - Chattogram</h1>
-                    </div>
-                </div>
-                <hr style="width: 100%; border: none; border-top: 2px dashed #888;">
-                    <div class="flex justify-between pt-6 pb-6">
-                        <div>
-                        <h1>Departure Time</h1>
-                    </div>
-                    <div>
-                        <h1>9:00 PM</h1>
-                    </div>
-                </div>
-                <hr style="width: 100%; border: none; border-top: 2px dashed #888;">
-                <div class="items-center justify-center">
-                    <div class="text-center">
-                    <button class="btn mt-6" style="color: #000000; background-color: #0307120d; border: 0;">Boarding Point - Gadtali</button>
-                    <button class="btn mt-6" style="color: #000000; background-color: #0307120d; border: 0;">Dropping Point - GEC more</button>
-                    <button class="btn mt-6" style="color: #000000; background-color: #0307120d; border: 0;">Est. Time - 6 Hour</button>
-                    </div>
-                </div>
-                </div>
-        </div>
-
-        <div class="border-r border-solid" style="border-color: #1DD100;"></div>
-
-
-        <div class="flex-col">
-            <img src="images/fare.png" alt="">
-            <br>
-            <h1><span class="font-extrabold">550 Taka</span><br> per seat</h1>
-        </div>
         
+                        <div class="bg-[#F7F8F8] p-8 rounded-3xl mt-7">
+                            <div class="flex justify-between pt-6 pb-6">
+                                <div>
+                                <h1>Route</h1>
+                            </div>
+                            <div>
+                                <h1>Dhaka - Chattogram</h1>
+                            </div>
+                        </div>
+                        <hr style="width: 100%; border: none; border-top: 2px dashed #888;">
+                            <div class="flex justify-between pt-6 pb-6">
+                                <div>
+                                <h1>Departure Time</h1>
+                            </div>
+                            <div>
+                                <h1>9:00 PM</h1>
+                            </div>
+                        </div>
+                        <hr style="width: 100%; border: none; border-top: 2px dashed #888;">
+                        <div class="items-center justify-center">
+                            <div class="text-center">
+                            <button class="btn mt-6" style="color: #000000; background-color: #0307120d; border: 0;">Boarding Point - Gabtali</button>
+                            <button class="btn mt-6" style="color: #000000; background-color: #0307120d; border: 0;">Dropping Point - GEC more</button>
+                            <button class="btn mt-6" style="color: #000000; background-color: #0307120d; border: 0;">Est. Time - 6 Hour</button>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+        
+                <div class="border-r border-solid" style="border-color: #1DD100;"></div>
+        
+        
+                <div class="flex-col">
+                    <img src="images/fare.png" alt="">
+                    <br>
+                    <h1><span class="font-extrabold">550 Taka</span><br> per seat</h1>
+                </div>
+                
+                </div>
+        
+                <div class="bg-[#FFF] text-center items-center mt-10 mr-32 ml-32 p-8">
+                    <div class="flex justify-between  text-center items-center mt-10 mr-16 ml-16 p-8">
+                        <div class="bg-[#F7F8F8] p-7">
+                            <h1>Select Your Seat</h1>
+                        <hr style="width: 100%; border: none; border-top: 2px dashed #888;">
+                        <div class="flex justify-between">
+                            <div>
+                                <img src="images/seat-gray.png" alt="">
+                                <h1>Available</h1>
+                            </div>
+                            <div>
+                                <img src="images/seat-green.png" alt="">
+                                <h1>Selected</h1>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-end">
+                                <kbd class="kbd" id="kbd-button" style="width: 50px; margin-bottom: 32px;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M16 28C14.4241 28 12.8637 27.6896 11.4078 27.0866C9.95189 26.4835 8.62902 25.5996 7.51472 24.4853C6.40042 23.371 5.5165 22.0481 4.91345 20.5922C4.31039 19.1363 4 17.5759 4 16C4 14.4241 4.31039 12.8637 4.91345 11.4078C5.5165 9.95189 6.40042 8.62902 7.51472 7.51472C8.62902 6.40042 9.95189 5.5165 11.4078 4.91345C12.8637 4.31039 14.4241 4 16 4C17.5759 4 19.1363 4.31039 20.5922 4.91345C22.0481 5.5165 23.371 6.40042 24.4853 7.51472C25.5996 8.62902 26.4835 9.95189 27.0866 11.4078C27.6896 12.8637 28 14.4241 28 16C28 17.5759 27.6896 19.1363 27.0866 20.5922C26.4835 22.0481 25.5996 23.371 24.4853 24.4853C23.371 25.5996 22.0481 26.4835 20.5922 27.0866C19.1363 27.6896 17.5759 28 16 28ZM16 28V18.6667M13.3333 16C13.3333 16.7072 13.6143 17.3855 14.1144 17.8856C14.6145 18.3857 15.2928 18.6667 16 18.6667M13.3333 16C13.3333 15.2928 13.6143 14.6145 14.1144 14.1144C14.6145 13.6143 15.2928 13.3333 16 13.3333C16.7072 13.3333 17.3855 13.6143 17.8856 14.1144C18.3857 14.6145 18.6667 15.2928 18.6667 16M13.3333 16L4.33333 13.3333M16 18.6667C16.7072 18.6667 17.3855 18.3857 17.8856 17.8856C18.3857 17.3855 18.6667 16.7072 18.6667 16M18.6667 16L27.6667 13.3333" stroke="#030712" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg></kbd>
+                            </div>
+                    
+                            <div class="flex justify-between">
+                                <div>
+                                    <kbd class="kbd" style="width: 50px;">A1</kbd>
+                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">A2</kbd>
+                                </div> 
+                                <div>
+                                    <kbd class="kbd" style="width: 50px;">A3</kbd>
+                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">A4</kbd>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-between" style="margin-top: 32px;">
+                                <div>
+                                    <kbd class="kbd" style="width: 50px;">B1</kbd>
+                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">B2</kbd>
+                                </div> 
+                                <div>
+                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">B3</kbd>
+                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">B4</kbd>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                
+                        <div class="bg-[#F7F8F8] p-3">
+                            <h1>Select Your Seat</h1>
+                            <hr style="width: 100%; border: none; border-top: 2px dashed #888;">
+                            
+                            <div class="bg-[#F7F8F8] flex flex-col-3 justify-around" id="seatSelection">
+                                <div class="flex flex-col">
+                                    <h1 class="font-bold">Seat</h1>
+                                    <div class="seat-info" id="selectedSeat1"></div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h1 class="font-bold">Class</h1>
+                                    <div class="class-info" id="selectedClass1"></div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h1 class="font-bold">Price</h1>
+                                    <div class="price-info" id="selectedPrice1"></div>
+                                </div>
+                            </div>
+                            
+                            <hr style="width: 100%; border: none; border-top: 2px solid #888;">
+                            <div class="flex justify-around">
+                                <div>
+                                    <h1>Total Price</h1>
+                                </div>
+                                <div id="totalPrice">
+                                    <span>BDT 0</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex relative">
+                                <input id="couponCodeInput" type="text" placeholder="Type coupon code here" class="input input-bordered input-md w-full max-w-xs" />
+                                <button id="applyButton" style="background-color: #1DD100; color: white;" class="btn btn-accent absolute inset-y-0 right-0">Apply</button>
+                            </div>
+                            
+                            
+                            <div class="flex justify-around">
+                                <div>
+                                    <h1>Grand Total</h1>
+                                </div>
+                                <div id="grandTotal">
+                                    <span>BDT 0</span>
+                                </div>
+                            </div>
+                            <!-- Open the modal using ID.showModal() method -->
+                            
+                            <button id="modalButton" class="btn" style="background-color: #1DD100; color: white;" onclick="my_modal_5.showModal()" disabled>Next</button>
+
+
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle" style="display: flex; justify-content: center; align-items: center;">
+  <div class="modal-box items-center" style="background-color: white; padding: 20px; border-radius: 8px; text-align: center;">
+    <img src="images/success.png" alt="" style="margin: 0 auto;">
+    <h3 class="font-bold text-lg">SUCCESS</h3>
+    <p class="py-4">Thank you for Booking Our Bus Seats. <br>
+        We are working hard to find the best service and deals for you. <br> 
+        Shortly you will find a confirmation in your email.</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn" style="background-color: #27AE60;">Continue</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
         </div>
 
+    
     </section>
+    
+    <script src="bus.js"></script>
 </body>
 </html>
