@@ -14,6 +14,9 @@ function ticket(event) {
     ticketSection.classList.remove('hidden');
 }
 
+// Add an event listener to the "Buy Tickets" button
+document.getElementById('buyTicketsButton').addEventListener('click', ticket);
+
 
 
 
@@ -105,7 +108,7 @@ function calculateTotalPrice() {
 
 
 
-let seatsLeft = 8;
+let seatsLeft = 40;
 let selectedSeats = new Set();
 
 function updateSeatCount() {

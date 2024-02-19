@@ -52,7 +52,8 @@
           <div class="max-w-2xl">
             <h1 class="mb-5 text-4xl font-bold">From start to destination travel with <br> <span style="font-weight: 900; color: #1dd10d;">Unique Service</span></h1>
             <p class="mb-5">Embark on a seamless journey with Unique Service, where every ride is an adventure. Experience comfort, reliability, and exceptional service as we pave the way for unforgettable travels.</p>
-            <button onclick="ticket(event)" class="btn" style="background-color: #1DD10D; border: none; color: white;">Buy Tickets</button>
+            <button id="buyTicketsButton" onclick="ticket(event)" class="btn" style="background-color: #1DD10D; border: none; color: white;">Buy Tickets</button>
+
 
 
 
@@ -129,7 +130,7 @@
                                 </div>
                             </div>
                             <div id="seatsLeftCounterContainer">
-                                <button class="flex"> <img src="images/seat-green-filled.png" alt=""> <span id="seatsLeftCounter">8 Seats left</span></button>
+                                <button class="flex"> <img src="images/seat-green-filled.png" alt=""> <span id="seatsLeftCounter">40 Seats left</span></button>
                             </div>
                             
                             
@@ -177,7 +178,7 @@
                 
                 </div>
         
-                <div class="bg-[#FFF] text-center items-center mt-10 mr-32 ml-32 p-8">
+                <div class="bg-[#FFF] text-center items-center mt-0 mr-32 ml-32 p-8">
                     <div class="flex justify-between  text-center items-center mt-10 mr-16 ml-16 p-8">
                         <div class="bg-[#F7F8F8] p-7">
                             <h1>Select Your Seat</h1>
@@ -199,114 +200,116 @@
                                   </svg></kbd>
                             </div>
                     
-                            <div class="flex justify-between">
-                                <div>
-                                    <kbd class="kbd" style="width: 50px;">A1</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">A2</kbd>
-                                </div> 
-                                <div>
-                                    <kbd class="kbd" style="width: 50px;">A3</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">A4</kbd>
+                            <div>
+                                <div class="flex justify-between">
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px;">A1</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">A2</kbd>
+                                    </div> 
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px;">A3</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">A4</kbd>
+                                    </div>
                                 </div>
-                            </div>
-                            
-                            <div class="flex justify-between" style="margin-top: 32px;">
-                                <div>
-                                    <kbd class="kbd" style="width: 50px;">B1</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">B2</kbd>
-                                </div> 
-                                <div>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">B3</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">B4</kbd>
+                                
+                                <div class="flex justify-between" style="margin-top: 32px;">
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px;">B1</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">B2</kbd>
+                                    </div> 
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">B3</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">B4</kbd>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="flex justify-between" style="margin-top: 32px;">
-                                <div>
-                                    <kbd class="kbd" style="width: 50px;">C1</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">C2</kbd>
-                                </div> 
-                                <div>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">C3</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">C4</kbd>
+    
+                                <div class="flex justify-between" style="margin-top: 32px;">
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px;">C1</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">C2</kbd>
+                                    </div> 
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">C3</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">C4</kbd>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="flex justify-between" style="margin-top: 32px;">
-                                <div>
-                                    <kbd class="kbd" style="width: 50px;">D1</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">D2</kbd>
-                                </div> 
-                                <div>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">D3</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">D4</kbd>
+    
+                                <div class="flex justify-between" style="margin-top: 32px;">
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px;">D1</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">D2</kbd>
+                                    </div> 
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">D3</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">D4</kbd>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex justify-between" style="margin-top: 32px;">
-                                <div>
-                                    <kbd class="kbd" style="width: 50px;">E1</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">E2</kbd>
-                                </div> 
-                                <div>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">E3</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">E4</kbd>
+                                <div class="flex justify-between" style="margin-top: 32px;">
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px;">E1</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">E2</kbd>
+                                    </div> 
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">E3</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">E4</kbd>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex justify-between" style="margin-top: 32px;">
-                                <div>
-                                    <kbd class="kbd" style="width: 50px;">F1</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">F2</kbd>
-                                </div> 
-                                <div>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">F3</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">F4</kbd>
+                                <div class="flex justify-between" style="margin-top: 32px;">
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px;">F1</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">F2</kbd>
+                                    </div> 
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">F3</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">F4</kbd>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex justify-between" style="margin-top: 32px;">
-                                <div>
-                                    <kbd class="kbd" style="width: 50px;">G1</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">G2</kbd>
-                                </div> 
-                                <div>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">G3</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">G4</kbd>
+                                <div class="flex justify-between" style="margin-top: 32px;">
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px;">G1</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">G2</kbd>
+                                    </div> 
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">G3</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">G4</kbd>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex justify-between" style="margin-top: 32px;">
-                                <div>
-                                    <kbd class="kbd" style="width: 50px;">H1</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">H2</kbd>
-                                </div> 
-                                <div>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">H3</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">H4</kbd>
+                                <div class="flex justify-between" style="margin-top: 32px;">
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px;">H1</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">H2</kbd>
+                                    </div> 
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">H3</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">H4</kbd>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex justify-between" style="margin-top: 32px;">
-                                <div>
-                                    <kbd class="kbd" style="width: 50px;">I1</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">I2</kbd>
-                                </div> 
-                                <div>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">I3</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">I4</kbd>
+                                <div class="flex justify-between" style="margin-top: 32px;">
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px;">I1</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">I2</kbd>
+                                    </div> 
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">I3</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">I4</kbd>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex justify-between" style="margin-top: 32px;">
-                                <div>
-                                    <kbd class="kbd" style="width: 50px;">J1</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">J2</kbd>
-                                </div> 
-                                <div>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">J3</kbd>
-                                    <kbd class="kbd" style="width: 50px; margin-left: 32px;">J4</kbd>
+                                <div class="flex justify-between" style="margin-top: 32px;">
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px;">J1</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">J2</kbd>
+                                    </div> 
+                                    <div>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">J3</kbd>
+                                        <kbd class="kbd" style="width: 50px; margin-left: 32px;">J4</kbd>
+                                    </div>
                                 </div>
                             </div>
                             
                         </div>
                         </div>
                 
-                        <div class="bg-[#F7F8F8] p-3">
+                        <div class="bg-[#F7F8F8] p-3" style="max-width: 600px;>
                             <h1>Select Your Seat</h1>
                             <hr style="width: 100%; border: none; border-top: 2px dashed #888;">
                             
@@ -385,7 +388,7 @@
     </section>
     </main>
     
-    <footer>
+    <footer class="mt-10">
         <footer class="footer p-10 bg-neutral text-neutral-content">
             <aside>
               
