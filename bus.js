@@ -124,7 +124,7 @@ function selectSeat(event) {
     } else {
         // Check if the maximum number of seats is already selected
         if (selectedSeats.size >= 4) {
-            alert('Maximum selection limit reached!');
+        
             return;
         }
         
@@ -152,45 +152,68 @@ document.querySelectorAll('.kbd').forEach(kbd => {
 
 
 
-// Function to calculate total price with discount
-function calculateTotalPrice(discountPercentage) {
+// Function to calculate total price without discount
+function calculateTotalPrice() {
     const seatPrice = 550; // Assuming seat price is 550
-    const discountedPrice = seatPrice - (seatPrice * discountPercentage) / 100;
-    const totalPrice = selectedButtons.size * discountedPrice;
+    const totalPrice = selectedButtons.size * seatPrice;
     return totalPrice;
+}
+
+// Function to update the total price display
+function updateTotalPrice() {
+    const totalPriceElement = document.getElementById('totalPrice');
+    const totalPrice = calculateTotalPrice();
+    totalPriceElement.textContent = `BDT ${totalPrice}`;
 }
 
 // Function to apply discount based on coupon code
 function applyDiscount() {
     var couponCode = document.getElementById('couponCodeInput').value.trim(); // Remove leading and trailing whitespace
     var grandTotalElement = document.getElementById('grandTotal');
-    var totalPriceElement = document.getElementById('totalPrice');
     var grandTotalValue = 0;
+
+    // Calculate total price without discount
+    var totalPrice = calculateTotalPrice();
 
     // Check if coupon code is NEW15
     if (couponCode.toUpperCase() === 'NEW15') {
-        // Calculate total price with 15% discount
-        var totalPrice = calculateTotalPrice(15);
-        totalPriceElement.textContent = 'BDT ' + totalPrice;
-        grandTotalValue = totalPrice;
+        // Apply 15% discount to the total price
+        grandTotalValue = totalPrice - (totalPrice * 15) / 100;
     }
     // Check if coupon code is COUPLE20
     else if (couponCode.toUpperCase() === 'COUPLE 20') {
-        // Calculate total price with 20% discount
-        var totalPrice = calculateTotalPrice(20);
-        totalPriceElement.textContent = 'BDT ' + totalPrice;
-        grandTotalValue = totalPrice;
+        // Apply 20% discount to the total price
+        grandTotalValue = totalPrice - (totalPrice * 20) / 100;
     }
     // Handle invalid coupon code
     else {
         alert('Invalid coupon code!');
-        totalPriceElement.textContent = 'BDT 550'; // Reset total price to default
-        grandTotalValue = 550; // Set grand total to default
+        grandTotalValue = totalPrice; // Set grand total to total price without discount
     }
 
     // Update grand total
     grandTotalElement.textContent = 'BDT ' + grandTotalValue;
 }
 
+// Function to enable or disable the coupon code input field and Apply button based on selected seats
+function toggleCouponCodeInput() {
+    const couponCodeInput = document.getElementById('couponCodeInput');
+    const applyButton = document.getElementById('applyButton');
+    couponCodeInput.disabled = selectedButtons.size === 0;
+    applyButton.disabled = selectedButtons.size === 0;
+}
+
 // Add an event listener to the Apply button for applying discounts
 document.getElementById('applyButton').addEventListener('click', applyDiscount);
+
+// Add an event listener to update the coupon code input field and Apply button based on selected seats
+document.querySelectorAll('.kbd').forEach(kbd => {
+    kbd.addEventListener('click', () => {
+        toggleCouponCodeInput();
+        updateTotalPrice(); // Update total price when a seat is selected or deselected
+    });
+});
+
+// Call updateTotalPrice() to display the initial total price when the page loads
+window.addEventListener('load', updateTotalPrice);
+
